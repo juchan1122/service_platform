@@ -41,9 +41,9 @@ spring:
 
 
 3. Build & Run
-터미널 명령어로만 서버 실행하는 방법
-Bash
-$git clone [https://github.com/juchan1122/service_platform.git$(https://github.com/juchan1122/service_platform.git$)
+터미널 명령어로만 서버 실행하는 방법  
+Bash  
+$git clone   [https://github.com/juchan1122/service_platform.git$(https://github.com/juchan1122/service_platform.git$)
 cd service_platform
 $ ./gradlew bootRun
 서버가 정상적으로 실행되면 http://localhost:8080/test 로 접속하여 "스프링 부트 서버가 정상적으로 연결되었습니다!" 문구를 확인합니다.
