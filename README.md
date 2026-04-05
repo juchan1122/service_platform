@@ -39,16 +39,21 @@ spring:
     show-sql: true
 ```
 
+### 3. Build & Run (터미널 명령어로 서버 실행)
+IDE(인텔리제이) 없이 터미널 명령어만으로 서버를 실행하는 방법입니다.
 
-3. Build & Run  
-터미널 명령어로만 서버 실행하는 방법  
-Bash  
-$ git clone   [https://github.com/juchan1122/service_platform.git$(https://github.com/juchan1122/service_platform.git$)  
+```bash
+# 1. 프로젝트 원격 저장소에서 다운로드 (Clone)
+git clone [https://github.com/juchan1122/service_platform.git](https://github.com/juchan1122/service_platform.git)
+
+# 2. 프로젝트 폴더로 이동
 cd service_platform
-$ ./gradlew bootRun  
-서버가 정상적으로 실행되면 http://localhost:8080/test 로 접속하여 "스프링 부트 서버가 정상적으로 연결되었습니다!" 문구를 확인합니다.
 
-📌 Troubleshooting (이슈 해결 기록)  
-26.04.26  
-Issue: 초기 실행 시 Cannot load driver class: org.mariadb.jdbc.Driver 에러 발생  
-Solution: build.gradle에 runtimeOnly 'org.mariadb.jdbc:mariadb-java-client' 의존성 추가 후 Gradle Refresh 수행하여 해결.
+# 3. 스프링 부트 서버 실행
+./gradlew bootRun
+
+## 📌 Troubleshooting (이슈 해결 기록)
+
+**[2026.04.06] MariaDB 드라이버 로드 에러**
+* **Issue:** 서버 초기 실행 시 `Cannot load driver class: org.mariadb.jdbc.Driver` 에러 발생과 함께 서버 강제 종료.
+* **Solution:** `build.gradle` 파일의 dependencies 블록에 `runtimeOnly 'org.mariadb.jdbc:mariadb-java-client'` 의존성 코드를 추가한 후, **Gradle Refresh(새로고침)**를 수행하여 라이브러리를 정상적으로 다운로드하여 해결.
