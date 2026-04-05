@@ -51,6 +51,7 @@ cd service_platform
 
 # 3. 스프링 부트 서버 실행
 ./gradlew bootRun
+```
 
 ## 📌 Troubleshooting (이슈 해결 기록)
 
