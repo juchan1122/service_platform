@@ -4,12 +4,25 @@
 
 ## 🛠 Tech Stack
 * **Language:** Java 21 (Amazon Corretto)
+* **Tools:** IntelliJ IDEA
 * **Framework:** Spring Boot 4.0.5 -> https://start.spring.io/
 * **Build Tool:** Gradle
 * **Database:** MariaDB 11.4.10 (LTS) -> https://mariadb.org/download/
 * **Database Tools:** DBeaver 26.0.1 -> https://dbeaver.io/download/
 * **Config:** YAML (`application.yml`)
 * **Packaging:** Jar
+
+## 📦 Dependencies (주요 라이브러리)
+* **Spring Web (`spring-boot-starter-web`)**
+  * 내장 톰캣(Tomcat)을 사용해 웹 서버를 구동하고, REST API를 개발하기 위한 필수 모듈입니다.
+* **Spring Data JPA (`spring-boot-starter-data-jpa`)**
+  * 자바 객체와 DB 테이블을 매핑(ORM)하여, 복잡한 SQL 쿼리 없이 메서드만으로 데이터베이스를 조작할 수 있게 해줍니다.
+* **Lombok (`lombok`)**
+  * Getter, Setter, 생성자 등 반복적인 코드를 어노테이션 하나로 자동 생성하여 코드의 가독성을 높여줍니다.
+* **Spring Boot DevTools (`spring-boot-devtools`)**
+  * 코드 수정 시 서버를 완전히 재시작하지 않아도 빠르게 반영되도록 돕는(Live Reload) 개발 편의성 도구입니다.
+* **MariaDB Java Client (`mariadb-java-client`)**
+  * 스
 
 ## 💡 기술 스택 선정 사유
 * **Java 21 & Corretto:** 최신 LTS 버전의 가상 스레드(Virtual Threads)를 통한 동시성 성능 최적화 및 향후 AWS 인프라 환경과의 완벽한 호환성을 고려함.
