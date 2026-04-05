@@ -4,9 +4,10 @@
 
 ## 🛠 Tech Stack
 * **Language:** Java 21 (Amazon Corretto)
-* **Framework:** Spring Boot 4.0.5
+* **Framework:** Spring Boot 4.0.5 -> https://start.spring.io/
 * **Build Tool:** Gradle
-* **Database:** MariaDB 11.4.10 (LTS)
+* **Database:** MariaDB 11.4.10 (LTS) -> https://mariadb.org/download/
+* **Database Tools:** DBeaver 26.0.1 -> https://dbeaver.io/download/
 * **Config:** YAML (`application.yml`)
 * **Packaging:** Jar
 
