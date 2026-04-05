@@ -80,3 +80,7 @@ cd service_platform
 * **Solution:** 1. `Settings > Build, Execution, Deployment > Compiler`에서 **Build project automatically** 옵션 활성화.
   2. `Settings > Advanced Settings`에서 **Allow auto-make to start even if developed application is currently running** 옵션 활성화.
   3. `spring-boot-devtools` 의존성과 조합하여, 코드 수정 후 포커스를 옮기거나 저장 시 서버가 자동으로 재시작되도록 환경 구축.
+
+**3. GitHub 원격 저장소 Push 충돌 (Unrelated Histories 에러)**
+* **Issue:** GitHub 웹에서 저장소 생성 시 `.gitignore`나 `README.md`를 포함하여 생성한 경우, 로컬 환경의 프로젝트와 커밋 히스토리가 달라 `git push` 시 `Updates were rejected` 에러가 발생함.
+* **Solution:** 터미널에 `git pull origin main --allow-unrelated-histories` 명령어를 입력하여 서로 관련 없는 두 저장소의 기록을 강제로 병합(Merge)한 후, 다시 Push를 진행하여 해결.
