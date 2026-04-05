@@ -37,7 +37,7 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: true
-
+```
 
 
 3. Build & Run
