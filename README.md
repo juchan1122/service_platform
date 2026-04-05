@@ -69,6 +69,14 @@ cd service_platform
 
 ## 📌 Troubleshooting (이슈 해결 기록)
 
-**[2026.04.06] MariaDB 드라이버 로드 에러**
+### 📅 [2026.04.06] 초기 세팅 및 환경 구축 이슈
+
+**1. MariaDB 드라이버 로드 에러**
 * **Issue:** 서버 초기 실행 시 `Cannot load driver class: org.mariadb.jdbc.Driver` 에러 발생과 함께 서버 강제 종료.
 * **Solution:** `build.gradle` 파일의 dependencies 블록에 `runtimeOnly 'org.mariadb.jdbc:mariadb-java-client'` 의존성 코드를 추가한 후, **Gradle Refresh(새로고침)**를 수행하여 라이브러리를 정상적으로 다운로드하여 해결.
+
+**2. IntelliJ 코드 수정 시 서버 자동 재시작(Live Reload) 설정**
+* **Issue:** 코드를 수정할 때마다 실행 중인 서버를 수동으로 중지하고 다시 시작해야 하는 번거로움과 개발 흐름 끊김 발생.
+* **Solution:** 1. `Settings > Build, Execution, Deployment > Compiler`에서 **Build project automatically** 옵션 활성화.
+  2. `Settings > Advanced Settings`에서 **Allow auto-make to start even if developed application is currently running** 옵션 활성화.
+  3. `spring-boot-devtools` 의존성과 조합하여, 코드 수정 후 포커스를 옮기거나 저장 시 서버가 자동으로 재시작되도록 환경 구축.
